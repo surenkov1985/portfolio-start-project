@@ -1,8 +1,8 @@
 import "./App.css";
 import styled from "styled-components";
-import { Header } from "./layout/Header";
-import { Footer } from "./layout/Footer";
-import { Main } from "./layout/Main";
+import { Header } from "./assets/layout/Header";
+import { Footer } from "./assets/layout/Footer";
+import { Main } from "./assets/layout/Main";
 
 function App() {
 	return (
