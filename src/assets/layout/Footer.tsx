@@ -19,7 +19,7 @@ export function Footer() {
 				<ContactsMenu routes={routes} color="#42446E" />
 
 				<StyledCopyrightText>
-					Designed and built by <StyledGradientText>Pavan MG</StyledGradientText> with
+					Designed and built by <StyledGradientText>Pavan MG </StyledGradientText> with{" "}
 					<StyledGradientText>Love & Coffee</StyledGradientText>
 				</StyledCopyrightText>
 			</StyledCopyrightContainer>
@@ -31,13 +31,12 @@ const StyldFooter = styled.footer`
 	padding: 60px 0;
 `;
 
-const StyledGradientText = styled.span`
+export const StyledGradientText = styled.span`
 	background: linear-gradient(90deg, rgb(19, 176, 245), rgb(231, 15, 170));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	text-fill-color: transparent;
-	font-family: DM Sans;
 	font-size: 1.125rem;
 `;
 

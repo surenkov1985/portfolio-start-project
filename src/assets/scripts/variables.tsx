@@ -27,7 +27,7 @@ export const routes: Route[] = [
 	{
 		id: 5,
 		name: "Contact",
-		path: "#contact",
+		path: "#contacts",
 	},
 ];
 
