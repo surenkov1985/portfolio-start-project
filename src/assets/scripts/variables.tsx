@@ -54,3 +54,16 @@ export const socialList = [
 		viewBox: "0 0 30 30",
 	},
 ];
+
+export const contacts = [
+	{
+		id: 1,
+		name: "+91 12345 09876",
+		path: "tel:+911234509876",
+	},
+	{
+		id: 2,
+		name: "info@example.com",
+		path: "mailto:info@example.com",
+	},
+];

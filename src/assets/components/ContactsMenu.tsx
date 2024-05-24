@@ -1,22 +1,21 @@
 import React from "react";
-import styled from "styled-components";
 import { Route } from "../scripts/variables";
-import { StyledMenu } from "../styledComponents/StyledMenu";
+import { StyledContactsMenu } from "../styledComponents/StyledContactsMenu";
 import { MenuLink } from "./MenuLink";
 
-export function Menu(props: MenuPropsType) {
+export function ContactsMenu(props: MenuPropsType) {
 	return (
-		<StyledMenu>
+		<StyledContactsMenu>
 			<ul>
 				{props.routes.map((item: Route) => {
 					return (
 						<li key={`link_${item.id}`}>
-							<MenuLink data={item} />
+							<MenuLink data={item} isSmall={true} color={props.color} />
 						</li>
 					);
 				})}
 			</ul>
-		</StyledMenu>
+		</StyledContactsMenu>
 	);
 }
 

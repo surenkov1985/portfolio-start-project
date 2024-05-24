@@ -4,15 +4,17 @@ import { Route } from "../scripts/variables";
 import { Link } from "./Link";
 
 export function MenuLink(props: MenuLinkPropsType) {
-	return <Link path={props.data.path} name={props.data.name} />;
+	return <Link path={props.data.path} name={props.data.name} isSmall={props.isSmall} color={props.color} />;
 }
 
 type MenuLinkPropsType = {
 	data: Route;
+	isSmall?: boolean;
+	color?: string;
 };
 
 const StyledMenuLink = styled.a`
-	color: rgb(102, 102, 102);
+	color: ${(props) => (props.color ? props.color : "rgb(102, 102, 102)")};
 	font-size: 1.25rem;
 	font-weight: 500;
 	text-decoration: none;
@@ -27,7 +29,7 @@ const StyledMenuLink = styled.a`
 		bottom: 0;
 		width: 0;
 		height: 2px;
-		background: rgb(102, 102, 102);
+		background: ${(props) => (props.color ? props.color : "rgb(102, 102, 102)")};
 		transition: width 0.5s;
 	}
 

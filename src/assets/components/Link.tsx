@@ -2,11 +2,13 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { Icon } from "./Icon";
 
-export function Link(props: any) {
+export function Link(props: LinkPropsType) {
 	return (
-		<StyledLink href={props.path} iconId={props.iconId} name={props.name}>
+		<StyledLink href={props.path} iconId={props.iconId} name={props.name} isSmall={props.isSmall} color={props.color}>
 			{props.name && props.name}
-			{props.iconId && <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox} />}
+			{props.iconId && (
+				<Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox} color={props.color || "#666666"} />
+			)}
 		</StyledLink>
 	);
 }
@@ -18,6 +20,8 @@ type LinkPropsType = {
 	width?: string;
 	height?: string;
 	viewBox?: string;
+	isSmall?: boolean;
+	color?: string;
 };
 type StyledLinkPropsType = {
 	href: string;
@@ -26,21 +30,35 @@ type StyledLinkPropsType = {
 	width?: string;
 	height?: string;
 	viewBox?: string;
+	isSmall?: boolean;
+	color?: string;
 };
 
 const StyledLink = styled.a<StyledLinkPropsType>`
 	transition: all 0.5s;
+	font-size: ${(props) => (props.isSmall ? 1.125 : 1.25)}1.25rem;
 
 	${(props) =>
 		props.name &&
 		css`
-			color: rgb(102, 102, 102);
-			font-size: 1.25rem;
+			color: ${(props: StyledLinkPropsType) => (props.color ? props.color : "rgb(102, 102, 102)")};
+
 			font-weight: 500;
 			text-decoration: none;
 			display: block;
-			padding: 3px 0;
+			padding: 2px 0;
 			position: relative;
+
+			&[href^="tel:"],
+			&[href^="mailto:"] {
+				&::before {
+					display: none;
+				}
+
+				&:hover {
+					opacity: 0.8;
+				}
+			}
 
 			&::before {
 				content: "";
@@ -49,7 +67,7 @@ const StyledLink = styled.a<StyledLinkPropsType>`
 				bottom: 0;
 				width: 0;
 				height: 2px;
-				background: rgb(102, 102, 102);
+				background: ${(props: StyledLinkPropsType) => (props.color ? props.color : "rgb(102, 102, 102)")};
 				transition: width 0.5s;
 			}
 			&:hover {
@@ -60,6 +78,7 @@ const StyledLink = styled.a<StyledLinkPropsType>`
 		`}
 
 	&:hover {
+		fill: ${(props: StyledLinkPropsType) => (props.color ? props.color : "rgb(102, 102, 102)")};
 		${(props) =>
 			props.iconId &&
 			css`

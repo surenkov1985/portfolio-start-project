@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { socialList } from "../scripts/variables";
 import { Link } from "./Link";
 
-export function Socials() {
+export function Socials(props: SocialsPropsType) {
 	return (
 		<StyledSocials>
 			{socialList.map((item) => {
@@ -15,6 +15,7 @@ export function Socials() {
 						width={item.width}
 						height={item.height}
 						viewBox={item.viewBox}
+						color={props.color}
 					/>
 				);
 			})}
@@ -22,9 +23,14 @@ export function Socials() {
 	);
 }
 
+type SocialsPropsType = {
+	color?: string;
+};
+
 const StyledSocials = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 1.25rem;
 	margin-left: 50px;
+	color?: string;
 `;
