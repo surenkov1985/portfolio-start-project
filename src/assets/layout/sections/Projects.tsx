@@ -1,14 +1,17 @@
 import React from "react";
 import { Container } from "../../styledComponents/Containers";
+import {StyledSection} from "./About";
+import {SectionTitle} from "../../components/SectionTitle";
+import {projects} from "../../scripts/variables";
+import {Cards} from "../../components/Cards";
 
 export function Projects() {
 	return (
-		<section id="projects">
-			<Container display="flex">
-				<div>
-					<h2>Projects</h2>
-				</div>
+		<StyledSection id="projects">
+			<Container>
+				<SectionTitle title={"Projects"} subtitle={"Things I’ve built so far"}></SectionTitle>
+				<Cards data={projects}/>
 			</Container>
-		</section>
+		</StyledSection>
 	);
 }

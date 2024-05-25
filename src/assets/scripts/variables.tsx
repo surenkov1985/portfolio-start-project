@@ -192,3 +192,54 @@ export const stackList = [
 	},
 
 ]
+
+export const projects = [
+	{
+		image: "project1.png",
+		title: "Project Tile goes here",
+		text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+		stack: "HTML , JavaScript, SASS, React",
+		previewLink: "/",
+		gitLink: "/",
+	},
+	{
+		image: "project2.png",
+		title: "Project Tile goes here",
+		text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+		stack: "HTML , JavaScript, SASS, React",
+		previewLink: "/",
+		gitLink: "/",
+	},
+	{
+		image: "project3.png",
+		title: "Project Tile goes here",
+		text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+		stack: "HTML , JavaScript, SASS, React",
+		previewLink: "/",
+		gitLink: "/",
+	},
+	{
+		image: "project4.png",
+		title: "Project Tile goes here",
+		text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+		stack: "HTML , JavaScript, SASS, React",
+		previewLink: "/",
+		gitLink: "/",
+	},
+	{
+		image: "project5.png",
+		title: "Project Tile goes here",
+		text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+		stack: "HTML , JavaScript, SASS, React",
+		previewLink: "/",
+		gitLink: "/",
+	},
+	{
+		image: "project6.png",
+		title: "Project Tile goes here",
+		text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+		stack: "HTML , JavaScript, SASS, React",
+		previewLink: "/",
+		gitLink: "/",
+	},
+]
