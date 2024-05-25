@@ -191,7 +191,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: var(--font-size);
         font-family: var(--font-accent);
         background: var(--clr-white);
-
+        scroll-behavior: smooth;
 
     }
 

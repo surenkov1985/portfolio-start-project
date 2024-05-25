@@ -1,24 +1,52 @@
 import React from "react";
 import { Container } from "../../styledComponents/Containers";
 import { StyledGradientText } from "../Footer";
+import styled from "styled-components";
+import {StyledSection} from "./About";
+import {SectionTitle} from "../../components/SectionTitle";
 
 export function Contacts() {
 	return (
-		<section id="contacts">
-			<Container display="flex">
-				<div>
-					<h2>
-						<section id="projects">
-							<Container display="flex">
-								<div>
-									<h2>For any questions please mail me:</h2>
-									<StyledGradientText>hi@pavanmg.in</StyledGradientText>
-								</div>
-							</Container>
-						</section>
-					</h2>
-				</div>
+		<StyledContactSection id="contacts">
+			<Container>
+
+				<StyledTitle>{"For any questions please mail me:"}</StyledTitle>
+				<StyledContact href={"mailto:hi@pavanmg.in"}>hi@pavanmg.in</StyledContact>
 			</Container>
-		</section>
+		</StyledContactSection>
 	);
 }
+
+const StyledContactSection = styled(StyledSection)`
+	padding-top: 84px;
+	padding-bottom: 150px;
+`
+
+const StyledTitle = styled.h2`
+  color: #42446E;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 10px;
+`
+
+const StyledContact = styled.a`
+	background: linear-gradient(90.00deg, rgb(19, 176, 245),rgb(231, 15, 170));
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	background-clip:text;
+	text-fill-color:transparent;
+	font-size: 58px;
+	font-weight: 700;
+	line-height: 70px;
+	letter-spacing: -1px;
+	transition: all .5s;
+	text-align: center;
+	display: block;
+	
+	&:hover {
+		opacity: 0.8;
+	}
+`
