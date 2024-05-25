@@ -1,12 +1,27 @@
 import React from "react";
 import { Container } from "../../styledComponents/Containers";
+import {SectionTitle} from "../../components/SectionTitle";
+import {StyledSection} from "./About";
+import styled from "styled-components";
+import {FlexContainer} from "../../styledComponents/FlexContainer";
+import {Icon} from "../../components/Icon";
+import {stackList} from "../../scripts/variables";
 
 export function Stack() {
 	return (
-		<section id="stack">
-			<Container display="flex">
-				<h2>My Tech Stack</h2>
+		<StyledSection id="stack">
+			<Container>
+				<SectionTitle title={"My Tech Stack"} subtitle={" Technologies I’ve been working with recently"}/>
+				<StyledStacksContainer wrap={"wrap"} align={"center"} justify={"space-between"}>
+					{stackList.map(item=><Icon {...item}/>)}
+
+				</StyledStacksContainer>
 			</Container>
-		</section>
+		</StyledSection>
 	);
 }
+
+const StyledStacksContainer = styled(FlexContainer)`
+	gap: 100px;
+`
+

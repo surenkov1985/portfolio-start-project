@@ -42,7 +42,7 @@ const StyledAboutContainer = styled(FlexContainer)`
 	max-width: 710px;
 `
 
-const StyledSection = styled.section`
+export const StyledSection = styled.section`
 	padding-top: 100px;
 	padding-bottom: 100px;
 `

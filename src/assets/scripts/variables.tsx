@@ -105,3 +105,90 @@ export const education = [
 		type: "Full Time"
 	}
 ]
+
+export const stackList = [
+	{
+		iconId: "html",
+		name: "HTML5",
+		width: "120",
+		height: "120",
+		viewBox: "0 0 120 120"
+	},{
+		iconId: "css",
+		name: "CSS3",
+		width: "120",
+		height: "120",
+		viewBox: "0 0 120 120"
+	},
+	{
+		iconId: "js",
+		name: "Javascript",
+		width: "120",
+		height: "120",
+		viewBox: "0 0 120 120"
+	},
+	{
+		iconId: "react",
+		name: "React",
+		width: "113",
+		height: "101",
+		viewBox: "0 0 113 101"
+	},
+	{
+		iconId: "redux",
+		name: "Redux",
+		width: "105",
+		height: "100",
+		viewBox: "0 0 105 100"
+	},
+	{
+		iconId: "bootstrap",
+		name: "Bootstrap",
+		width: "88",
+		height: "87",
+		viewBox: "0 0 88 87"
+	},
+	{
+		iconId: "tylewind",
+		name: "Tylewind",
+		width: "131",
+		height: "131",
+		viewBox: "0 0 131 131"
+	},
+	{
+		iconId: "sass",
+		name: "Sass",
+		width: "117",
+		height: "87",
+		viewBox: "0 0 117 87"
+	},
+	{
+		iconId: "git_icon",
+		name: "Git",
+		width: "105",
+		height: "105",
+		viewBox: "0 0 105 105"
+	},
+	{
+		iconId: "gsap",
+		name: "Greensock",
+		width: "120",
+		height: "120",
+		viewBox: "0 0 120 120"
+	},
+	{
+		iconId: "vsc",
+		name: "VS-Code",
+		width: "112",
+		height: "112",
+		viewBox: "0 0 112 112"
+	},
+	{
+		iconId: "github",
+		name: "Github",
+		width: "88",
+		height: "88",
+		viewBox: "0 0 88 88"
+	},
+
+]
