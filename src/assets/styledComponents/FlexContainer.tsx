@@ -6,6 +6,7 @@ export const FlexContainer = styled.div<StyledFlexContainerProps>`
 	align-items: ${(props) => props.align || "flex-start"};
 	justify-content: ${(props) => props.justify || "flex-start"};
 	flex-wrap: ${(props) => props.wrap || "nowrap"};
+	position: relative;
 `;
 
 type StyledFlexContainerProps = {

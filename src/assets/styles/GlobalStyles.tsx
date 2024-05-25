@@ -187,7 +187,7 @@ export const GlobalStyles = createGlobalStyle`
         min-width: 320px;
         margin: 0;
         overflow-x: hidden;
-        color: var(--clr-black);
+        color: #666666;
         font-size: var(--font-size);
         font-family: var(--font-accent);
         background: var(--clr-white);

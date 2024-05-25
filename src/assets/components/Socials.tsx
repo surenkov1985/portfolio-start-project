@@ -32,5 +32,4 @@ const StyledSocials = styled.div`
 	align-items: center;
 	gap: 1.25rem;
 	margin-left: 50px;
-	color?: string;
 `;

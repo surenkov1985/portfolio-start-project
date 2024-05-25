@@ -67,3 +67,41 @@ export const contacts = [
 		path: "mailto:info@example.com",
 	},
 ];
+
+export const works = [
+	{
+		id: 1,
+		name: "Junior Web Developer",
+		company: "Dr. Rajkumar’s Learning App",
+		place: "Bengaluru",
+		dates: "Sep 2021 - Dec 2021",
+		type: "Full Time"
+	},
+	{
+		id: 2,
+		name: "Web Development Intern",
+		company: "IonPixelz Web Solutions",
+		place: "Bengaluru",
+		dates: "Sep 2021 - Dec 2021",
+		type: "Internship"
+	},
+	{
+		id: 3,
+		name: "SEO / SEM Specialist",
+		company: "HAAPS",
+		place: "Bengaluru",
+		dates: "Sep 2021 - Dec 2021",
+		type: "Internship"
+	}
+]
+
+export const education = [
+	{
+		id: 1,
+		name: "Bachelor in Electronics & Communication",
+		company: "Bangalore Instutute of Technology",
+		place: "",
+		dates: "Aug 2015 - Dec 2020",
+		type: "Full Time"
+	}
+]
