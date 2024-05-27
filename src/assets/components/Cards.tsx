@@ -11,7 +11,7 @@ type CardsPropTypes = {
 export function Cards(props:CardsPropTypes) {
     return (
         <StyledCards wrap={"wrap"}>
-            {props.data.map(item=><Card image={item.image}
+            {props.data.map((item, index)=><Card key={`card_${index}`} image={item.image}
                                         title={item.title}
                                         text={item.text}
                                         stack={item.stack}

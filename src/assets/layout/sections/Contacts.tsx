@@ -4,14 +4,16 @@ import { StyledGradientText } from "../Footer";
 import styled from "styled-components";
 import {StyledSection} from "./About";
 import {SectionTitle} from "../../components/SectionTitle";
+import {FlexContainer} from "../../styledComponents/FlexContainer";
 
 export function Contacts() {
 	return (
 		<StyledContactSection id="contacts">
 			<Container>
-
-				<StyledTitle>{"For any questions please mail me:"}</StyledTitle>
-				<StyledContact href={"mailto:hi@pavanmg.in"}>hi@pavanmg.in</StyledContact>
+				<FlexContainer direction={"column"} align={"center"}>
+					<StyledTitle>{"For any questions please mail me:"}</StyledTitle>
+					<StyledContact href={"mailto:hi@pavanmg.in"}>hi@pavanmg.in</StyledContact>
+				</FlexContainer>
 			</Container>
 		</StyledContactSection>
 	);
@@ -44,7 +46,6 @@ const StyledContact = styled.a`
 	letter-spacing: -1px;
 	transition: all .5s;
 	text-align: center;
-	display: block;
 	
 	&:hover {
 		opacity: 0.8;

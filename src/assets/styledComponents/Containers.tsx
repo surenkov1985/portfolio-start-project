@@ -12,10 +12,6 @@ export const Container = styled.div`
 	}};
 `;
 
-export const FlexContainer = styled.div`
-	display: flex;
-`;
-
 type ContainerStyledProps = {
 	display?: string;
 	alignItems?: string;

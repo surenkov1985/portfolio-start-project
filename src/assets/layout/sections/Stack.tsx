@@ -13,7 +13,7 @@ export function Stack() {
 			<Container>
 				<SectionTitle title={"My Tech Stack"} subtitle={" Technologies I’ve been working with recently"}/>
 				<StyledStacksContainer wrap={"wrap"} align={"center"} justify={"space-between"}>
-					{stackList.map(item=><Icon {...item}/>)}
+					{stackList.map(item=><Icon key={item.name} {...item}/>)}
 
 				</StyledStacksContainer>
 			</Container>
