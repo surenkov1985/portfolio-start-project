@@ -14,10 +14,10 @@ export type CardPropTypes = {
 
 export function Card(props:CardPropTypes) {
     return (
-        <StyledCard direction={"column"} >
+        <StyledCard >
             <img src={require(`../images/${props.image}`)} alt="{props.name}"/>
             <StyledCardContent>
-                <StyledCardTytle>{props.title}</StyledCardTytle>
+                <StyledCardTitle>{props.title}</StyledCardTitle>
                 <StyledCardText>{props.text}</StyledCardText>
                 <StyledCardStack>Tech stack: <span>{props.stack}</span></StyledCardStack>
                 <FlexContainer align={"center"} justify={"space-between"} >
@@ -32,7 +32,9 @@ export function Card(props:CardPropTypes) {
     );
 }
 
-const StyledCard = styled(FlexContainer)`
+const StyledCard = styled.article`
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
   flex: 1 1 350px;
@@ -52,7 +54,7 @@ const StyledCardContent = styled.div`
   width: 100%;
 `
 
-const StyledCardTytle = styled.h3`
+const StyledCardTitle = styled.h3`
   font-size: 28px;
   font-weight: 500;
   line-height: 26px;
