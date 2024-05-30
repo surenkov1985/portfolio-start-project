@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../../../styledComponents/Containers";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {AboutPropsType, StyledSection} from "./About";
+import {AboutPropsType} from "./About";
 import styled from "styled-components";
 import {FlexContainer} from "../../../styledComponents/FlexContainer";
 import {Icon} from "../../../components/Icon";
@@ -20,8 +20,11 @@ export function Stack() {
 		</StyledSection>
 	);
 }
-
+export const StyledSection = styled.section`
+	padding-top: 76px;
+	padding-bottom: 116px;
+`
 const StyledStacksContainer = styled(FlexContainer)`
-	gap: 100px;
+	gap: 80px 100px;
 `
 

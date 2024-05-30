@@ -20,16 +20,17 @@ export function Contacts() {
 }
 
 const StyledContactSection = styled(StyledSection)`
-	padding-top: 84px;
+	padding-top: 100px;
 	padding-bottom: 150px;
 `
 
 const StyledTitle = styled.h2`
   color: #42446E;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 26px;
-  letter-spacing: 0px;
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 1.2;
+	letter-spacing: -3px;
+  //letter-spacing: 0px;
   text-align: center;
   margin-bottom: 10px;
 `
@@ -41,9 +42,9 @@ const StyledContact = styled.a`
 	background-clip:text;
 	text-fill-color:transparent;
 	font-size: 58px;
-	font-weight: 700;
-	line-height: 70px;
-	letter-spacing: -1px;
+	font-weight: 500;
+	line-height: 1.2;
+	letter-spacing: -3px;
 	transition: all .5s;
 	text-align: center;
 	

@@ -41,7 +41,8 @@ export function About() {
 }
 
 export const StyledSection = styled.section`
-	padding-top: 100px;
+	padding-top: 86px;
+	padding-bottom: 86px;
 `
 
 const StyledAboutSection = styled(StyledSection)`
@@ -57,7 +58,7 @@ const StyledAboutSection = styled(StyledSection)`
 
 const StyledAboutContainer = styled(FlexContainer)`
 	width: 100%;
-	max-width: 710px;
+	max-width: 696px;
 `
 
 
@@ -70,7 +71,7 @@ const StyledAboutTitle = styled.h3`
 	line-height: 52px;
 	letter-spacing: -0.4px;
 	text-align: left;
-	margin-bottom: 38px;
+	margin-bottom: 34px;
 `
 
 const StyledAboutContent = styled.div`
@@ -79,8 +80,8 @@ const StyledAboutContent = styled.div`
 `
 
 const StyledAboutText = styled.p`
-	max-width: 480px;
-	margin-bottom: 1rem;
+	//max-width: 480px;
+	margin-bottom: 2.5rem;
 	color: rgb(102, 102, 102);
 	font-size: 1.125rem;
 	font-weight: 400;

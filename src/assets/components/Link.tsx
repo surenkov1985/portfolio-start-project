@@ -42,12 +42,13 @@ const StyledLink = styled.a<StyledLinkPropsType>`
 		props.name &&
 		css`
 			color: ${(props: StyledLinkPropsType) => (props.color ? props.color : "rgb(102, 102, 102)")};
-
+			font-family: 'DM Sans', sans-serif;
 			font-weight: 500;
 			text-decoration: none;
 			display: block;
 			padding: 2px 0;
 			position: relative;
+			line-height: 1.3;
 
 			&[href^="tel:"],
 			&[href^="mailto:"] {

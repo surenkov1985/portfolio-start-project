@@ -28,7 +28,6 @@ const StyledFixedHead = styled.div`
       padding: 20px 0;
       position: fixed;
       width: 100%;
-      //height: 100%;
       top: 0;
       left: 0;
       transform: ${(props:FixedHeaderPropTypes)=> props.isActive ? 'translateY(0)' : 'translateY(-100%)'};

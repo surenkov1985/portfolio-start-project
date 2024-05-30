@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 import React from "react";
 import { Container } from "../../styledComponents/Containers";
@@ -9,21 +9,38 @@ import { routes } from "../../scripts/variables";
 import { Socials } from "../../components/Socials";
 import {ThemeToggler} from "../../components/ThemeToggler";
 
-export function Header() {
+type HeaderPropsType = {
+	isActive?: boolean
+	fixed?: boolean
+}
+export function Header(props:HeaderPropsType) {
 	return (
-		<StyledHead>
-			<Container display="flex">
+		<StyledHead as={props.fixed ? "div" : "header"} fixed={props.fixed} isActive={props.isActive}>
+			<Container display="flex" alignItems={"flex-start"}>
 
 				<Logo iconType="gradient" />
 				<Menu routes={routes} />
 				<Socials />
-				<ThemeToggler/>
+				{/*<ThemeToggler/>*/}
 			</Container>
 		</StyledHead>
 	);
 }
 
-const StyledHead = styled.header`
+const StyledHead = styled.header<HeaderPropsType>`
 	width: 100%;
 	padding: 40px 0;
+	
+	${props => props.fixed && css`
+		width: 100%;
+		padding: 20px 0;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transform: ${props.isActive ? 'translateY(0)' : 'translateY(-100%)'};
+		transition: transform 0.7s;
+		background: rgba(255,255,255,.5);
+		backdrop-filter: blur(5px);
+	`}
 `;

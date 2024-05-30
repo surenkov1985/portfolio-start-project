@@ -44,12 +44,12 @@ export function WorkItem(props:WorkItemPropsType) {
 
 const StyledWorkItem = styled(FlexContainer)`
   
-  padding-bottom: 24px;
+  padding-bottom: 25px;
   border-bottom: 2px solid rgb(235, 234, 237);
 `
 
 const StyledWorkDesc = styled.div`
-  width: calc(380 / 696 * 100%);
+  width: calc(460 / 696 * 100%);
 `
 const StyledWorkText = styled(FlexContainer)`
   font-size: 0.75rem;
@@ -63,6 +63,7 @@ const StyledWorkTitle = styled.h3`
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 1px;
+  margin-bottom: 8px;
 `
 
 const StyledWorkType = styled.div`
@@ -76,7 +77,7 @@ const StyledWorkType = styled.div`
   color: #018C0F;
   font-size: 9px;
   font-weight: 600;
-  line-height: 26px;
+  //line-height: 26px;
   letter-spacing: 0px;
   text-align: center;
 `

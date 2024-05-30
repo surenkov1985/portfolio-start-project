@@ -9,7 +9,7 @@ export function Projects() {
 	return (
 		<StyledSection id="projects" >
 			<Container>
-				<SectionTitle title={"Projects"} subtitle={"Things I’ve built so far"}></SectionTitle>
+				<SectionTitle mBottom={"110px"} title={"Projects"} subtitle={"Things I’ve built so far"}></SectionTitle>
 				<Cards data={projects}/>
 			</Container>
 		</StyledSection>

@@ -28,7 +28,7 @@ export function Footer() {
 }
 
 const StyldFooter = styled.footer`
-	padding: 60px 0;
+	padding: 62px 0;
 `;
 
 export const StyledGradientText = styled.span`

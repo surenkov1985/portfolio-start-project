@@ -11,7 +11,7 @@ import { GlobalStyles } from "./assets/styles/GlobalStyles";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-		<ThemeProvider theme={myTheme.darkTheme}>
+		<ThemeProvider theme={myTheme['darkTheme']}>
 		<App />
 		<GlobalStyles />
 	</ThemeProvider>

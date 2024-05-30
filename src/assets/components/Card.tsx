@@ -51,7 +51,7 @@ const StyledCard = styled.article`
 
 const StyledCardContent = styled.div`
   height: auto;
-  padding: 25px 30px;
+  padding: 28px 30px 24px;
   width: 100%;
 `
 
@@ -69,7 +69,7 @@ const StyledCardText = styled.p`
   font-weight: 300;
   line-height: 26px;
   letter-spacing: 0px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.875rem;
 `
 
 const StyledCardStack = styled.div`
@@ -79,6 +79,9 @@ const StyledCardStack = styled.div`
     letter-spacing: 0px;
   color: #42446E;
   margin-bottom: 1.25rem;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
     
     & span {
       font-size: 14px;

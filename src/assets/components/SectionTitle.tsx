@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export  function SectionTitle(props:SectionTitlePropsType) {
     return (
-        <StyledSectionTitle>
+        <StyledSectionTitle mBottom={props.mBottom}>
             <StyledTitle>{props.title}</StyledTitle>
             {props.subtitle && <StyledSubtitle>{props.subtitle}</StyledSubtitle>}
         </StyledSectionTitle>
@@ -14,9 +14,13 @@ export  function SectionTitle(props:SectionTitlePropsType) {
 type SectionTitlePropsType = {
     title: string
     subtitle?: string
+    mBottom?:string
 }
-const StyledSectionTitle = styled.div`
-  margin-bottom: 110px;
+type StyledSectionTitlePropsType = {
+    mBottom?:string
+}
+const StyledSectionTitle = styled.div<StyledSectionTitlePropsType>`
+  margin-bottom: ${props=>props.mBottom ? props.mBottom : "125px"};
 `
 const StyledTitle = styled.h2`
   color: #42446E;
@@ -25,7 +29,7 @@ const StyledTitle = styled.h2`
   line-height: 26px;
   letter-spacing: 0px;
   text-align: center;
-  margin-bottom: 49px;
+  margin-bottom: 48px;
 `
 const StyledSubtitle = styled.p`
   font-size: 2rem;
