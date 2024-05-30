@@ -24,7 +24,7 @@ export function Card(props:CardPropTypes) {
                     <StyledCardLink href={props.previewLink}><Icon iconId="link" width="20" height="20" viewBox="0 0 20 20" color={"none"}/> <span>Live Preview</span>
                     </StyledCardLink>
                     <StyledCardLink href={props.gitLink}>
-                        <Icon iconId="git_sm" width="20" height="20" viewBox="0 0 20 20"  color={"#000000"}/> <span>View Code</span>
+                        <Icon iconId="git_sm" width="20" height="20" viewBox="0 0 20 20"  /> <span>View Code</span>
                     </StyledCardLink>
                 </FlexContainer>
             </StyledCardContent>
@@ -39,7 +39,7 @@ const StyledCard = styled.article`
   overflow: hidden;
   flex: 1 1 300px;
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
-  background: rgb(255, 255, 255);
+  background: ${props => props.theme.cardBg};
   flex-shrink: 0;
   
   & img {
@@ -60,7 +60,7 @@ const StyledCardTitle = styled.h3`
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 0px;
-  color: #000000;
+  color: ${props => props.theme.cardTitle};
   margin-bottom: 1rem;
 `
 
@@ -77,7 +77,7 @@ const StyledCardStack = styled.div`
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0px;
-  color: #42446E;
+  color: ${props => props.theme.title};
   margin-bottom: 1.25rem;
   display: flex;
   gap: 8px;
@@ -100,8 +100,12 @@ const StyledCardLink = styled.a`
     line-height: 26px;
     letter-spacing: 0px;
     text-decoration-line: underline;
-    color: #000000;
+    color: ${props => props.theme.cardTitle};
     transition: all .5s;
+  }
+  
+  & svg path {
+    fill: ${props => props.theme.cardTitle} !important;
   }
   
   &:hover {

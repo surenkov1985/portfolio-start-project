@@ -40,7 +40,7 @@ const StyledHead = styled.header<HeaderPropsType>`
 		left: 0;
 		transform: ${props.isActive ? 'translateY(0)' : 'translateY(-100%)'};
 		transition: transform 0.7s;
-		background: rgba(255,255,255,.5);
+		background: ${props => props.theme.colors.fixedHeaderBg};
 		backdrop-filter: blur(5px);
 	`}
 `;
