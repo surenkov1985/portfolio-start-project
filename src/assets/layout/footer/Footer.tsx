@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { ContactsMenu } from "../components/ContactsMenu";
-import { Logo } from "../components/Logo";
-import { Menu } from "../components/Menu";
-import { Socials } from "../components/Socials";
-import { contacts, routes } from "../scripts/variables";
-import { Container } from "../styledComponents/Containers";
+import { ContactsMenu } from "../../components/ContactsMenu";
+import { Logo } from "../../components/Logo";
+import { FooterMenu } from "../../components/FooterMenu";
+import { Socials } from "../../components/Socials";
+import { contacts, routes } from "../../scripts/variables";
+import { Container } from "../../styledComponents/Containers";
 
 export function Footer() {
 	return (
@@ -16,7 +16,7 @@ export function Footer() {
 				<Socials color="#42446E" />
 			</Container>
 			<StyledCopyrightContainer>
-				<ContactsMenu routes={routes} color="#42446E" />
+				<FooterMenu routes={routes} color="#42446E" />
 
 				<StyledCopyrightText>
 					Designed and built by <StyledGradientText>Pavan MG </StyledGradientText> with{" "}

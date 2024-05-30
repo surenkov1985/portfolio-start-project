@@ -1,15 +1,15 @@
 import React from "react";
-import { Container } from "../../styledComponents/Containers";
-import {SectionTitle} from "../../components/SectionTitle";
-import {StyledSection} from "./About";
+import { Container } from "../../../styledComponents/Containers";
+import {SectionTitle} from "../../../components/SectionTitle";
+import {AboutPropsType, StyledSection} from "./About";
 import styled from "styled-components";
-import {FlexContainer} from "../../styledComponents/FlexContainer";
-import {Icon} from "../../components/Icon";
-import {stackList} from "../../scripts/variables";
+import {FlexContainer} from "../../../styledComponents/FlexContainer";
+import {Icon} from "../../../components/Icon";
+import {stackList} from "../../../scripts/variables";
 
 export function Stack() {
 	return (
-		<StyledSection id="stack">
+		<StyledSection id="stack" >
 			<Container>
 				<SectionTitle title={"My Tech Stack"} subtitle={" Technologies I’ve been working with recently"}/>
 				<StyledStacksContainer wrap={"wrap"} align={"center"} justify={"space-between"}>

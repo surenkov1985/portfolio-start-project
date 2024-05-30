@@ -1,16 +1,19 @@
 import React from "react";
-import {Container} from "../../styledComponents/Containers";
-import {FlexContainer} from "../../styledComponents/FlexContainer";
+import {Container} from "../../../styledComponents/Containers";
+import {FlexContainer} from "../../../styledComponents/FlexContainer";
 
 import styled from "styled-components";
 
-import image from "../../images/drawing.png"
-import {WorkList} from "../../components/WorkList";
-import {education, works} from "../../scripts/variables";
+import image from "../../../images/drawing.png"
+import {WorkList} from "../../../components/WorkList";
+import {education, works} from "../../../scripts/variables";
 
+export type AboutPropsType = {
+	refVal: any
+}
 export function About() {
 	return (
-		<StyledSection id="about">
+		<StyledAboutSection id="about">
 			<Container>
 				<FlexContainer justify={"space-between"}>
 					<StyledAboutContainer>
@@ -29,23 +32,35 @@ export function About() {
 						</StyledAboutContent>
 
 					</StyledAboutContainer>
-					<StyledAboutImage src={image} alt=""/>
+					{/*<StyledAboutImage src={image} alt=""/>*/}
 				</FlexContainer>
 
 			</Container>
-		</StyledSection>
+		</StyledAboutSection>
 	);
 }
+
+export const StyledSection = styled.section`
+	padding-top: 100px;
+`
+
+const StyledAboutSection = styled(StyledSection)`
+	position: relative;
+
+	&::before {
+		content: url("${image}");
+		position: absolute;
+		right: 100%;
+
+	}
+`
 
 const StyledAboutContainer = styled(FlexContainer)`
 	width: 100%;
 	max-width: 710px;
 `
 
-export const StyledSection = styled.section`
-	padding-top: 100px;
-	padding-bottom: 100px;
-`
+
 
 const StyledAboutTitle = styled.h3`
 	color: rgb(66, 68, 110);
@@ -60,6 +75,7 @@ const StyledAboutTitle = styled.h3`
 
 const StyledAboutContent = styled.div`
 	width: 100%;
+
 `
 
 const StyledAboutText = styled.p`

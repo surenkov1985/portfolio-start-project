@@ -1,14 +1,14 @@
 import React from "react";
-import { Container } from "../../styledComponents/Containers";
-import { StyledGradientText } from "../Footer";
+import { Container } from "../../../styledComponents/Containers";
+import { StyledGradientText } from "../../footer/Footer";
 import styled from "styled-components";
-import {StyledSection} from "./About";
-import {SectionTitle} from "../../components/SectionTitle";
-import {FlexContainer} from "../../styledComponents/FlexContainer";
+import {AboutPropsType, StyledSection} from "./About";
+import {SectionTitle} from "../../../components/SectionTitle";
+import {FlexContainer} from "../../../styledComponents/FlexContainer";
 
 export function Contacts() {
 	return (
-		<StyledContactSection id="contacts">
+		<StyledContactSection id="contacts" >
 			<Container>
 				<FlexContainer direction={"column"} align={"center"}>
 					<StyledTitle>{"For any questions please mail me:"}</StyledTitle>

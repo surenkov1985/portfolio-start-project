@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "../../styledComponents/Containers";
-import portfolio from "../../images/portfolio.jpg";
-import { FlexContainer } from "../../styledComponents/FlexContainer";
-import { StyledGradientText } from "../Footer";
+import { Container } from "../../../styledComponents/Containers";
+import portfolio from "../../../images/portfolio.jpg";
+import { FlexContainer } from "../../../styledComponents/FlexContainer";
+import { StyledGradientText } from "../../footer/Footer";
+import {AboutPropsType} from "./About";
 
-export function Home() {
+export function Home(props:AboutPropsType) {
 	return (
-		<StyledSection id="home">
+		<StyledSection id="home" ref={props.refVal}>
 			<Container>
 				<FlexContainer align="center" justify="space-between">
 					<StyledTitle>
-						<h2>
+						<span>
 							Hi 👋,
 							<br /> My name is <br /> <GradientText>Pavan MG</GradientText>
-						</h2>
+						</span>
 						<h1>I build things for web</h1>
 					</StyledTitle>
 					<StyledImageContainer>
@@ -43,6 +44,7 @@ const StyledImageContainer = styled.div`
 	border-radius: 50%;
 	isolation: isolate;
 	position: relative;
+	flex-shrink: 0;
 
 	&::before {
 		content: "";

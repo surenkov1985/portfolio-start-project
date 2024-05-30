@@ -36,7 +36,7 @@ type StyledLinkPropsType = {
 
 const StyledLink = styled.a<StyledLinkPropsType>`
 	transition: all 0.5s;
-	font-size: ${(props) => (props.isSmall ? 1.125 : 1.25)}1.25rem;
+	font-size: ${(props) => (props.isSmall ? 1.125 : 1.25)}rem;
 
 	${(props) =>
 		props.name &&

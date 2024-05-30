@@ -1,10 +1,11 @@
 import "./App.css";
 import styled from "styled-components";
-import { Header } from "./assets/layout/Header";
-import { Footer } from "./assets/layout/Footer";
-import { Main } from "./assets/layout/Main";
+import { Header } from "./assets/layout/header/Header";
+import { Footer } from "./assets/layout/footer/Footer";
+import { Main } from "./assets/layout/main/Main";
+import {myTheme} from "./assets/styles/Theme.styled";
 
-function App() {
+export function App() {
 	return (
 		<Wrapper>
 			<Header />
@@ -14,19 +15,12 @@ function App() {
 	);
 }
 
-export default App;
-
-const Title = styled.h1`
-	font-size: 1.5em;
-	text-align: center;
-	color: #e91e63;
-`;
-
 const Wrapper = styled.div`
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	padding: 0 2rem;
+	background: ${props=> props.theme.colors.bg};
+	transition: background 1s;
 `;

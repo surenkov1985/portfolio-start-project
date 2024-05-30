@@ -37,9 +37,10 @@ const StyledCard = styled.article`
   flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
-  flex: 1 1 350px;
+  flex: 1 1 300px;
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
   background: rgb(255, 255, 255);
+  flex-shrink: 0;
   
   & img {
     width: 100%;
@@ -71,7 +72,7 @@ const StyledCardText = styled.p`
   margin-bottom: 0.75rem;
 `
 
-const StyledCardStack = styled.p`
+const StyledCardStack = styled.div`
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
