@@ -18,6 +18,7 @@ const StyledTHemeToggler = styled.label`
   display: inline-block;
   width: 50px;
   height: 30px;
+  margin-top: 6px;
   
   & input {
     display: none;

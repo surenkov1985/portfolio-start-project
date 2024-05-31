@@ -21,7 +21,7 @@ export function Header(props:HeaderPropsType) {
 				<Logo iconType="gradient" />
 				<Menu routes={routes} />
 				<Socials />
-				{/*<ThemeToggler/>*/}
+				<ThemeToggler/>
 			</Container>
 		</StyledHead>
 	);
