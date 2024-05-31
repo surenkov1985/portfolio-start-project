@@ -21,6 +21,17 @@ type StyledSectionTitlePropsType = {
 }
 const StyledSectionTitle = styled.div<StyledSectionTitlePropsType>`
   margin-bottom: ${props=>props.mBottom ? props.mBottom : "125px"};
+
+  @media ${props => props.theme.media.tablet} {
+    margin-bottom: 90px;
+  }
+
+  @media ${props => props.theme.media.mobile} {
+    margin-bottom: 50px;
+  }
+  @media (max-width: 360px) {
+    margin-bottom: 30px;
+  }
 `
 const StyledTitle = styled.h2`
   color: #42446E;
@@ -30,11 +41,35 @@ const StyledTitle = styled.h2`
   letter-spacing: 0px;
   text-align: center;
   margin-bottom: 48px;
+
+  @media ${props => props.theme.media.tablet} {
+    font-size: 2rem; 
+    line-height: 1;
+    margin-bottom: 42px;
+  }
+
+  @media ${props => props.theme.media.mobile} {
+    font-size: 1.875rem;
+    margin-bottom: 30px;
+
+    @media (max-width: 360px) {
+      margin-bottom: 16px;
+    }
+  }
 `
 const StyledSubtitle = styled.p`
   font-size: 2rem;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1.3;
   letter-spacing: 0px;
   text-align: center;
+  
+  @media ${props => props.theme.media.tablet} {
+    font-size: 1.5rem;
+  }
+
+  @media ${props => props.theme.media.mobile} {
+    font-size: 1.25rem;
+  }
+  
 `

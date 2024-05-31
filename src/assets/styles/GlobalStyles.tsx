@@ -318,6 +318,11 @@ export const GlobalStyles = createGlobalStyle`
         font-family: "Poppins",
             sans-serif;
       line-height: 1.23;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+
     }
 
     code {

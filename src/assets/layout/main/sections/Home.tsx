@@ -52,7 +52,7 @@ const StyledFlexContainer = styled(FlexContainer)`
 	@media (max-width: 576px) {
 		flex-direction: column-reverse;
 		gap: 2rem;
-		align-items: flex-start;
+		align-items: center;
 	}
 `
 
@@ -128,7 +128,12 @@ const StyledTitle = styled.div`
 		}
 		@media (max-width: 576px) {
 			font-size: 32px;
+			text-align: center;
 		}
+	}
+	@media (max-width: 576px) {
+		font-size: 32px;
+		text-align: center;
 	}
 `;
 

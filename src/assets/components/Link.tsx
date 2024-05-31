@@ -38,6 +38,10 @@ const StyledLink = styled.a<StyledLinkPropsType>`
 	transition: all 0.5s;
 	font-size: ${(props) => (props.isSmall ? 1.125 : 1.25)}rem;
 
+	@media ${props => props.theme.media.mobile} {
+		font-size: 1.25rem	;
+	}
+
 	${(props) =>
 		props.name &&
 		css`

@@ -17,7 +17,7 @@ export function Menu(props: MenuPropsType) {
 					);
 				})}
 			</ul>
-			<StyledBurgerButton aria-label={"burger button"}>
+			<StyledBurgerButton aria-label={"burger button"} aria-haspopup={true}>
 				<span></span><span></span><span></span>
 			</StyledBurgerButton>
 

@@ -11,6 +11,20 @@ export const Container = styled.div`
 	align-items: ${(props: ContainerStyledProps) => {
 		return props.alignItems || "center";
 	}};
+	
+	@media (max-width: 1240px) {
+		padding: 0 3rem 0 1rem;
+	}
+
+	@media (max-width: 991px) {
+		padding: 0 2.5rem 0 1rem;
+	}
+	@media (max-width: 758px) {
+		padding: 0 2rem 0 1rem;
+	}
+	@media (max-width: 576px) {
+		padding: 0 1rem 0 1rem;
+	}
 `;
 
 type ContainerStyledProps = {

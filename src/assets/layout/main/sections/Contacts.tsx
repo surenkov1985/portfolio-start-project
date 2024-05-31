@@ -22,6 +22,22 @@ export function Contacts() {
 const StyledContactSection = styled(StyledSection)`
 	padding-top: 100px;
 	padding-bottom: 150px;
+
+	@media (max-width: 1240px) {
+		padding: 90px 0 130px 0;
+	}
+	@media (max-width: 991px) {
+		padding: 80px 0 100px 0;
+	}
+	@media (max-width: 768px) {
+		padding: 60px 0 80px 0;
+	}
+	@media (max-width: 576px) {
+		padding: 50px 0 60px 0;
+	}
+	@media (max-width: 320px) {
+		padding: 40px 0 30px 0;
+	}
 `
 
 const StyledTitle = styled.h2`
@@ -33,6 +49,21 @@ const StyledTitle = styled.h2`
   //letter-spacing: 0px;
   text-align: center;
   margin-bottom: 10px;
+
+	@media (max-width: 1240px) {
+		font-size: 46px;
+	}
+
+	@media (max-width: 991px) {
+		font-size: 42px;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 36px;
+	}
+	@media (max-width: 576px) {
+		font-size: 32px;
+	}
 `
 
 const StyledContact = styled.a`
@@ -50,5 +81,20 @@ const StyledContact = styled.a`
 	
 	&:hover {
 		opacity: 0.8;
+	}
+
+	@media (max-width: 1240px) {
+		font-size: 46px;
+	}
+
+	@media (max-width: 991px) {
+		font-size: 42px;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 36px;
+	}
+	@media (max-width: 576px) {
+		font-size: 32px;
 	}
 `

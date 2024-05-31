@@ -10,6 +10,11 @@ export const myTheme = {
 			cardBg: "#ffffff",
 			fixedHeaderBg: "rgba(255, 255, 255, .5)"
 		},
+
+		media: {
+			tablet: "screen and (max-width: 768px)",
+			mobile: "screen and (max-width: 576px)"
+		}
 	},
 	darkTheme: {
 		colors: {
@@ -22,5 +27,10 @@ export const myTheme = {
 			cardBg: "#363636",
 			fixedHeaderBg: "rgba(0, 0, 0, .5)"
 		},
+		media: {
+			tablet: "screen and (max-width: 768px)",
+			mobile: "screen and (max-width: 576px)"
+		}
 	},
+
 };

@@ -23,4 +23,16 @@ export function Cards(props:CardsPropTypes) {
 
 const StyledCards = styled(FlexContainer)`
   gap: 62px 34px;
+
+  @media ${props => props.theme.media.tablet} {
+    gap: 50px 30px;
+  }
+
+  @media ${props => props.theme.media.mobile} {
+    gap: 40px 25px;
+  }
+
+  @media (max-width: 320px) {
+    gap: 20px;
+  }
 `

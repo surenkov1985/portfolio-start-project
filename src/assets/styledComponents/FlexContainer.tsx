@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const FlexContainer = styled.div<StyledFlexContainerProps>`
 	display: flex;
@@ -7,6 +7,10 @@ export const FlexContainer = styled.div<StyledFlexContainerProps>`
 	justify-content: ${(props) => props.justify || "flex-start"};
 	flex-wrap: ${(props) => props.wrap || "nowrap"};
 	position: relative;
+	
+	${props => props.gap && css`
+		gap: ${props.gap}
+	`}
 `;
 
 type StyledFlexContainerProps = {
@@ -14,4 +18,5 @@ type StyledFlexContainerProps = {
 	align?: string;
 	justify?: string;
 	wrap?: string;
+	gap?: string
 };

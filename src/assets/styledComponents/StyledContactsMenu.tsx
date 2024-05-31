@@ -10,6 +10,21 @@ export const StyledContactsMenu = styled.nav`
 		padding: 0;
 		margin: 0;
 		display: flex;
+        flex-wrap: wrap;
 		gap: 4.5rem;
+      
+      @media ${props => props.theme.media.tablet} {
+        gap: 1rem 3rem;
+      }
+      @media ${props => props.theme.media.mobile} {
+        gap: 1rem 2rem;
+      }
 	}
+  @media ${props => props.theme.media.tablet} {
+    margin-right: 0;
+  }
+
+  @media ${props => props.theme.media.mobile} {
+    display: none;
+  }
 `;
