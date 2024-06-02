@@ -15,7 +15,7 @@ export type CardPropTypes = {
 export function Card(props:CardPropTypes) {
     return (
         <StyledCard >
-            <img src={require(`../images/${props.image}`)} alt="{props.name}"/>
+            <img src={require(`../assets/images/${props.image}`)} alt="{props.name}"/>
             <StyledCardContent>
                 <StyledCardTitle>{props.title}</StyledCardTitle>
                 <StyledCardText>{props.text}</StyledCardText>

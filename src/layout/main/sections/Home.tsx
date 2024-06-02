@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../../../styledComponents/Containers";
-import portfolio from "../../../images/portfolio.jpg";
+import portfolio from "../../../assets/images/portfolio.jpg";
 import { FlexContainer } from "../../../styledComponents/FlexContainer";
 import { StyledGradientText } from "../../footer/Footer";
 import {AboutPropsType} from "./About";

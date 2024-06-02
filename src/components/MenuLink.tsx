@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Route } from "../scripts/variables";
+import { Route } from "../assets/scripts/variables";
 import { Link } from "./Link";
 
 export function MenuLink(props: MenuLinkPropsType) {

@@ -4,7 +4,7 @@ import styled, {css} from "styled-components";
 import {Container} from "../../styledComponents/Containers";
 import {Logo} from "../../components/Logo";
 import {Menu} from "../../components/Menu";
-import {routes} from "../../scripts/variables";
+import {routes} from "../../assets/scripts/variables";
 import {Socials} from "../../components/Socials";
 
 type FixedHeaderPropTypes = {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { socialList } from "../scripts/variables";
+import { socialList } from "../assets/scripts/variables";
 import { Link } from "./Link";
 
 export function Socials(props: SocialsPropsType) {
@@ -27,7 +27,7 @@ type SocialsPropsType = {
 	color?: string;
 };
 
-const StyledSocials = styled.div`
+export const StyledSocials = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 1.25rem;

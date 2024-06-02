@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "../scripts/variables";
+import { Route } from "../assets/scripts/variables";
 import { StyledContactsMenu } from "../styledComponents/StyledContactsMenu";
 import { MenuLink } from "./MenuLink";
 

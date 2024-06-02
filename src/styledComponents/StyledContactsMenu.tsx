@@ -11,7 +11,11 @@ export const StyledContactsMenu = styled.nav`
 		margin: 0;
 		display: flex;
         flex-wrap: wrap;
-		gap: 4.5rem;
+		gap: 1rem 4.5rem;
+
+      @media screen and (max-width: 991px) {
+        gap: 1rem 3rem;
+      }
       
       @media ${props => props.theme.media.tablet} {
         gap: 1rem 3rem;

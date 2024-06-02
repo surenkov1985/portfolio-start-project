@@ -1,5 +1,5 @@
 import React from "react";
-import LogoIcon from "../images/sprite.svg";
+import LogoIcon from "../assets/images/sprite.svg";
 
 export function Icon(props: IconPropsType) {
 	return (

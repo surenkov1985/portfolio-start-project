@@ -5,7 +5,7 @@ import {AboutPropsType} from "./About";
 import styled from "styled-components";
 import {FlexContainer} from "../../../styledComponents/FlexContainer";
 import {Icon} from "../../../components/Icon";
-import {stackList} from "../../../scripts/variables";
+import {stackList} from "../../../assets/scripts/variables";
 
 export function Stack() {
 	return (

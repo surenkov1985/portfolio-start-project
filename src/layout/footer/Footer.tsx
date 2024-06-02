@@ -4,7 +4,7 @@ import { ContactsMenu } from "../../components/ContactsMenu";
 import { Logo } from "../../components/Logo";
 import { FooterMenu } from "../../components/FooterMenu";
 import { Socials } from "../../components/Socials";
-import { contacts, routes } from "../../scripts/variables";
+import { contacts, routes } from "../../assets/scripts/variables";
 import { Container } from "../../styledComponents/Containers";
 import {FlexContainer} from "../../styledComponents/FlexContainer";
 

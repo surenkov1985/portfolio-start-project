@@ -4,9 +4,9 @@ import {FlexContainer} from "../../../styledComponents/FlexContainer";
 
 import styled from "styled-components";
 
-import image from "../../../images/drawing.png"
+import image from "../../../assets/images/drawing.png"
 import {WorkList} from "../../../components/WorkList";
-import {education, works} from "../../../scripts/variables";
+import {education, works} from "../../../assets/scripts/variables";
 
 export type AboutPropsType = {
 	refVal: any

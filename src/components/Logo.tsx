@@ -1,7 +1,7 @@
 import React from "react";
-import logoImg from "./../images/logo.svg"
-import logoGrayImg from "./../images/logo_gray.svg"
-import logoBlueImg from "./../images/logo_blue.svg"
+import logoImg from "../assets/images/logo.svg"
+import logoGrayImg from "../assets/images/logo_gray.svg"
+import logoBlueImg from "../assets/images/logo_blue.svg"
 
 type LogoPropsType = {
 	iconType: string;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Route } from "../scripts/variables";
+import { Route } from "../assets/scripts/variables";
 // import { StyledMenu } from "../styledComponents/StyledMenu";
 import { MenuLink } from "./MenuLink";
 
@@ -17,7 +17,7 @@ export function Menu(props: MenuPropsType) {
 					);
 				})}
 			</ul>
-			<StyledBurgerButton aria-label={"burger button"} aria-haspopup={true}>
+			<StyledBurgerButton aria-label={"burger button"} aria-haspopup={true} onClick={props.toggleMobile}>
 				<span></span><span></span><span></span>
 			</StyledBurgerButton>
 
@@ -139,4 +139,5 @@ const StyledMenu = styled.nav`
 type MenuPropsType = {
 	routes: Route[];
 	color?: string;
+	toggleMobile?: ()=> void
 };

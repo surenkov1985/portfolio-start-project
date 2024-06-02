@@ -1,27 +1,44 @@
 import styled, {css} from "styled-components";
 
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Container } from "../../styledComponents/Containers";
-import { Icon } from "../../components/Icon";
 import { Logo } from "../../components/Logo";
 import { Menu } from "../../components/Menu";
-import { routes } from "../../scripts/variables";
+import { routes } from "../../assets/scripts/variables";
 import { Socials } from "../../components/Socials";
 import {ThemeToggler} from "../../components/ThemeToggler";
+import {Mobile} from "../mobile/Mobile";
 
 type HeaderPropsType = {
 	isActive?: boolean
 	fixed?: boolean
 }
+
 export function Header(props:HeaderPropsType) {
+	const [mobileActive, setMobileActive] = useState(false);
+
+	useEffect(() => {
+		console.log(mobileActive)
+		if (mobileActive) {
+			document.body.classList.add("hidden")
+		} else {
+			document.body.classList.remove("hidden")
+		}
+	}, [mobileActive]);
+
+	function toggleMobileMenu() {
+		setMobileActive(!mobileActive)
+	}
+
 	return (
 		<StyledHead as={props.fixed ? "div" : "header"} fixed={props.fixed} isActive={props.isActive}>
 			<Container display="flex" alignItems={"flex-start"}>
 
 				<Logo iconType="gradient" />
-				<Menu routes={routes} />
+				<Menu routes={routes} toggleMobile={toggleMobileMenu}/>
 				<Socials />
 				<ThemeToggler/>
+				<Mobile isActive={mobileActive} closeMobile={toggleMobileMenu}  routes={routes}	/>
 			</Container>
 		</StyledHead>
 	);
