@@ -1,5 +1,4 @@
-export const myTheme = {
-	lightTheme: {
+export const light = {
 		colors: {
 			cardTitle: "#000000",
 			primary: "#666666",
@@ -10,13 +9,12 @@ export const myTheme = {
 			cardBg: "#ffffff",
 			fixedHeaderBg: "rgba(255, 255, 255, .5)"
 		},
-
 		media: {
 			tablet: "screen and (max-width: 768px)",
 			mobile: "screen and (max-width: 576px)"
 		}
-	},
-	darkTheme: {
+	};
+export const dark = {
 		colors: {
 			cardTitle: "#CCCCCC",
 			primary: "#a7a7a7",
@@ -31,6 +29,4 @@ export const myTheme = {
 			tablet: "screen and (max-width: 768px)",
 			mobile: "screen and (max-width: 576px)"
 		}
-	},
-
-};
+	};

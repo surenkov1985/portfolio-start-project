@@ -9,6 +9,7 @@ import {Socials} from "../../components/Socials";
 
 type FixedHeaderPropTypes = {
     isActive:boolean
+
 };
 
 export function FixedHeader(props:FixedHeaderPropTypes) {

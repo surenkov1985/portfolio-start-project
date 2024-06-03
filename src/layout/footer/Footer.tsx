@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, {useContext} from "react";
+import styled, {ThemeContext} from "styled-components";
 import { ContactsMenu } from "../../components/ContactsMenu";
 import { Logo } from "../../components/Logo";
 import { FooterMenu } from "../../components/FooterMenu";
@@ -9,13 +9,15 @@ import { Container } from "../../styledComponents/Containers";
 import {FlexContainer} from "../../styledComponents/FlexContainer";
 
 export function Footer() {
+	const theme = useContext(ThemeContext)
+
 	return (
 		<StyldFooter>
 			<Container>
 				<FlexContainer align={"center"} wrap={"wrap"} gap={"1rem"}>
 					<Logo iconType="" iconColor="#42446E" />
 					<ContactsMenu routes={contacts} color="#42446E" />
-					<Socials color="#42446E" />
+					<Socials color={theme.colors.title} />
 				</FlexContainer>
 				<StyledCopyrightContainer>
 					<FooterMenu routes={routes} color="#42446E" />

@@ -37,6 +37,8 @@ type StyledLinkPropsType = {
 const StyledLink = styled.a<StyledLinkPropsType>`
 	transition: all 0.5s;
 	font-size: ${(props) => (props.isSmall ? 1.125 : 1.25)}rem;
+	color: ${(props) => (props.color ? props.theme.colors.title : props.theme.colors.primary)};
+	transition: color 0.7s;
 
 	@media ${props => props.theme.media.mobile} {
 		font-size: 1.25rem	;
@@ -45,7 +47,7 @@ const StyledLink = styled.a<StyledLinkPropsType>`
 	${(props) =>
 		props.name &&
 		css`
-			color: ${(props: StyledLinkPropsType) => (props.color ? props.color : "rgb(102, 102, 102)")};
+			
 			font-family: 'DM Sans', sans-serif;
 			font-weight: 500;
 			text-decoration: none;

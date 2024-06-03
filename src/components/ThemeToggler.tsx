@@ -1,12 +1,18 @@
-import React from 'react';
-import styled from "styled-components";
+import React, {useContext, useState} from 'react';
+import styled, {ThemeContext, useTheme} from "styled-components";
 import {FlexContainer} from "../styledComponents/FlexContainer";
 
-export function ThemeToggler() {
+type ThemeTogglerPropsType = {
+    toggleTheme?: () => void
+}
+export function ThemeToggler(props:ThemeTogglerPropsType) {
+    const theme = useContext(ThemeContext);
+    const myTheme = useTheme()
+    console.log(theme, myTheme)
     return (
         <FlexContainer align={"center"} style={{marginLeft: "40px"}}>
             <StyledTHemeToggler className="switch">
-                <input type="checkbox"/>
+                <input type="checkbox"  onChange={props.toggleTheme}/>
                     <StyledSlider className="slider round"/>
             </StyledTHemeToggler>
         </FlexContainer>

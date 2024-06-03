@@ -1,6 +1,6 @@
-import styled, {css} from "styled-components";
+import styled, {css, ThemeContext} from "styled-components";
 
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Container } from "../../styledComponents/Containers";
 import { Logo } from "../../components/Logo";
 import { Menu } from "../../components/Menu";
@@ -12,11 +12,12 @@ import {Mobile} from "../mobile/Mobile";
 type HeaderPropsType = {
 	isActive?: boolean
 	fixed?: boolean
+	toggleTheme?: () => void
 }
 
 export function Header(props:HeaderPropsType) {
 	const [mobileActive, setMobileActive] = useState(false);
-
+	const theme = useContext(ThemeContext)
 	useEffect(() => {
 		console.log(mobileActive)
 		if (mobileActive) {
@@ -36,8 +37,8 @@ export function Header(props:HeaderPropsType) {
 
 				<Logo iconType="gradient" />
 				<Menu routes={routes} toggleMobile={toggleMobileMenu}/>
-				<Socials />
-				<ThemeToggler/>
+				<Socials color={theme.colors.primary} />
+				<ThemeToggler toggleTheme={props.toggleTheme}/>
 				<Mobile isActive={mobileActive} closeMobile={toggleMobileMenu}  routes={routes}	/>
 			</Container>
 		</StyledHead>

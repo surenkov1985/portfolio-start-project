@@ -14,7 +14,7 @@ type MenuLinkPropsType = {
 };
 
 const StyledMenuLink = styled.a`
-	color: ${(props) => (props.color ? props.color : "rgb(102, 102, 102)")};
+	color: ${(props) => (props.color ? props.theme.colors.title : props.theme.colors.primary)};
 	font-size: 1.25rem;
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 500;

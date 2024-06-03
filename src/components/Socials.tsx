@@ -4,6 +4,8 @@ import { socialList } from "../assets/scripts/variables";
 import { Link } from "./Link";
 
 export function Socials(props: SocialsPropsType) {
+
+
 	return (
 		<StyledSocials>
 			{socialList.map((item) => {

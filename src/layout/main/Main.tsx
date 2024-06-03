@@ -8,11 +8,16 @@ import { Stack } from "./sections/Stack";
 import {useInView} from "react-intersection-observer";
 import {Header} from "../header/Header";
 
-export function Main() {
+type MainPropsType = {
+	toggleTheme?: () => void
+}
+export function Main(props:MainPropsType) {
 	const [active, setActive] = useState(false)
 	const {ref, inView, entry} =useInView({
 		rootMargin: "500px 0px 300px",
 		threshold:1
+
+
 	})
 
 	useEffect(()=>{
@@ -27,7 +32,7 @@ export function Main() {
 			<Stack />
 			<Projects />
 			<Contacts/>
-			<Header isActive={active} fixed={true} />
+			<Header isActive={active} fixed={true} toggleTheme={props.toggleTheme}/>
 		</StyledMain>
 	);
 }

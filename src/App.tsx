@@ -1,17 +1,29 @@
 import "./App.css";
-import styled from "styled-components";
+import styled, {ThemeContext, ThemeProvider} from "styled-components";
 import { Header } from "./layout/header/Header";
 import { Footer } from "./layout/footer/Footer";
 import { Main } from "./layout/main/Main";
-import {myTheme} from "./assets/styles/Theme.styled";
+import {dark, light} from "./assets/styles/Theme.styled";
+import {GlobalStyles} from "./assets/styles/GlobalStyles";
+import React, {useContext, useEffect, useState} from "react";
+
 
 export function App() {
+	const [theme, setTheme] = useState('light')
+
+	function toggleTheme () {
+		setTheme(theme === 'light' ? 'dark' : 'light')
+	}
+
 	return (
-		<Wrapper>
-			<Header />
-			<Main />
-			<Footer />
-		</Wrapper>
+		<ThemeProvider theme={theme === 'light' ? light : dark}>
+			<Wrapper>
+				<Header toggleTheme={toggleTheme}/>
+				<Main toggleTheme={toggleTheme}/>
+				<Footer />
+			</Wrapper>
+			<GlobalStyles />
+		</ThemeProvider>
 	);
 }
 

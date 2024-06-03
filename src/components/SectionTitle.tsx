@@ -34,13 +34,14 @@ const StyledSectionTitle = styled.div<StyledSectionTitlePropsType>`
   }
 `
 const StyledTitle = styled.h2`
-  color: #42446E;
+  color: ${props => props.theme.colors.title};
   font-size: 3rem;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: 0px;
   text-align: center;
   margin-bottom: 48px;
+  transition: color 0.7s;
 
   @media ${props => props.theme.media.tablet} {
     font-size: 2rem; 
@@ -63,6 +64,8 @@ const StyledSubtitle = styled.p`
   line-height: 1.3;
   letter-spacing: 0px;
   text-align: center;
+  color: ${props => props.theme.colors.primary};
+  transition: color 0.7s;
   
   @media ${props => props.theme.media.tablet} {
     font-size: 1.5rem;
