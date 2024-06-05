@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, {css} from "styled-components";
 import {Container} from "../../styledComponents/Containers";
 import {Logo} from "../../components/Logo";
-import {Menu} from "../../components/Menu";
+import {Menu} from "./menu/Menu";
 import {routes} from "../../assets/scripts/variables";
 import {Socials} from "../../components/Socials";
 

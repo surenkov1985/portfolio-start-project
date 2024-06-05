@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import {contacts, Route} from "../../assets/scripts/variables";
-import {MobileMenu} from "../../components/MobileMenu";
+import {MobileMenu} from "../header/menu/MobileMenu";
 import {Logo} from "../../components/Logo";
 import {Socials, StyledSocials} from "../../components/Socials";
-import {ContactsMenu} from "../../components/ContactsMenu";
+import {ContactsMenu} from "../footer/footerMenu/ContactsMenu";
 import {StyledContactsMenu} from "../../styledComponents/StyledContactsMenu";
 
 type MobilePropsType = {
@@ -37,7 +37,7 @@ export function Mobile(props:MobilePropsType) {
 const StyledMobileWrapper = styled.div<StyledMobilePropsType>`
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   right: 0;
   z-index:  1000;
@@ -47,7 +47,7 @@ const StyledMobileWrapper = styled.div<StyledMobilePropsType>`
   backdrop-filter: blur(10px);
   visibility: ${props => props.isActive ? 'visible' : 'hidden'};
   opacity: ${props => props.isActive ? '1' : '0'};
-  transition: all 0.3s;
+  transition: opacity 0.3s;
   
   @media screen and (min-width: 1100px) {
     display: none;

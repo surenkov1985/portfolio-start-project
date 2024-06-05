@@ -14,8 +14,8 @@ type MainPropsType = {
 export function Main(props:MainPropsType) {
 	const [active, setActive] = useState(false)
 	const {ref, inView, entry} =useInView({
-		rootMargin: "500px 0px 300px",
-		threshold:1
+		rootMargin: "500px 0px 500px",
+		threshold:0.9
 
 
 	})

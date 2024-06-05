@@ -1,22 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Route } from "../assets/scripts/variables";
+import { Route } from "../../../assets/scripts/variables";
 // import { StyledMenu } from "../styledComponents/StyledMenu";
-import { MenuLink } from "./MenuLink";
+import { MenuItem } from "../../../components/MenuItem";
+import {MenuList} from "./MenuList";
 
 export function MobileMenu(props: MenuPropsType) {
     return (
         <StyledMenu>
-            <ul role={"menu"}>
-                {props.routes.map((item: Route) => {
-                    return (
-                        <li key={`link_${item.id}`} role={"menuitem"}>
-                            <MenuLink data={item} />
-
-                        </li>
-                    );
-                })}
-            </ul>
+            <MenuList routes={props.routes}/>
 
         </StyledMenu>
     );

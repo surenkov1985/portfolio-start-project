@@ -1,21 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Route } from "../assets/scripts/variables";
+import { Route } from "../../../assets/scripts/variables";
 // import { StyledMenu } from "../styledComponents/StyledMenu";
-import { MenuLink } from "./MenuLink";
+
+import {MenuList} from "../../header/menu/MenuList";
 
 export function FooterMenu(props: MenuPropsType) {
 	return (
 		<StyledMenu>
-			<ul>
-				{props.routes.map((item: Route) => {
-					return (
-						<li key={`link_${item.id}`}>
-							<MenuLink data={item} isSmall={true}  color={props.color}/>
-						</li>
-					);
-				})}
-			</ul>
+			<MenuList routes={props.routes}/>
 		</StyledMenu>
 	);
 }

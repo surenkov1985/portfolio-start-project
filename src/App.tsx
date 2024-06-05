@@ -9,11 +9,16 @@ import React, {useContext, useEffect, useState} from "react";
 
 
 export function App() {
-	const [theme, setTheme] = useState('light')
+	const defaultTheme = localStorage.theme ? localStorage.theme : "light"
+	const [theme, setTheme] = useState(defaultTheme)
 
 	function toggleTheme () {
-		setTheme(theme === 'light' ? 'dark' : 'light')
+		setTheme(theme === 'light' ? 'dark' : 'light');
 	}
+
+	useEffect(() => {
+		localStorage.theme = theme;
+	}, [theme])
 
 	return (
 		<ThemeProvider theme={theme === 'light' ? light : dark}>
@@ -33,7 +38,6 @@ const Wrapper = styled.div`
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	
 	background: ${props=> props.theme.colors.bg};
 	transition: background 1s;
 `;

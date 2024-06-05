@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "../../../styledComponents/Containers";
-import { StyledGradientText } from "../../footer/Footer";
 import styled from "styled-components";
 import {AboutPropsType, StyledSection} from "./About";
 import {SectionTitle} from "../../../components/SectionTitle";
@@ -41,12 +40,11 @@ const StyledContactSection = styled(StyledSection)`
 `
 
 const StyledTitle = styled.h2`
-  color: #42446E;
+  color: ${props => props.theme.colors.title};
   font-size: 58px;
   font-weight: 500;
   line-height: 1.2;
 	letter-spacing: -3px;
-  //letter-spacing: 0px;
   text-align: center;
   margin-bottom: 10px;
 

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Container } from "../../../styledComponents/Containers";
 import portfolio from "../../../assets/images/portfolio.jpg";
 import { FlexContainer } from "../../../styledComponents/FlexContainer";
-import { StyledGradientText } from "../../footer/Footer";
 import {AboutPropsType} from "./About";
+import {S} from "../../footer/footerStyles";
 
 export function Home(props:AboutPropsType) {
 	return (
@@ -14,7 +14,7 @@ export function Home(props:AboutPropsType) {
 					<StyledTitle>
 						<span>
 							Hi 👋,
-							<br /> My name is <br /> <StyledGradientText>Pavan MG</StyledGradientText>
+							<br /> My name is <br /> <S.GradientText>Pavan MG</S.GradientText>
 						</span>
 						<h1>I build things for web</h1>
 					</StyledTitle>
@@ -113,7 +113,7 @@ const StyledTitle = styled.div`
 		line-height: 1.25;
 		letter-spacing: -1px;
 		text-align: left;
-		color: #42446e;
+		color: ${props => props.theme.colors.title};
 
 		@media (max-width: 1240px) {
 			font-size: 46px;
