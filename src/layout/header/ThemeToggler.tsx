@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import styled, {ThemeContext, useTheme} from "styled-components";
-import {FlexContainer} from "../styledComponents/FlexContainer";
+import {FlexContainer} from "../../styledComponents/FlexContainer";
 
 type ThemeTogglerPropsType = {
     toggleTheme?: () => void
@@ -8,7 +8,7 @@ type ThemeTogglerPropsType = {
 export function ThemeToggler(props:ThemeTogglerPropsType) {
     const theme = useContext(ThemeContext);
     const myTheme = useTheme()
-    console.log(theme, myTheme)
+
     return (
         <FlexContainer align={"center"} style={{marginLeft: "40px"}}>
             <StyledTHemeToggler className="switch">

@@ -1,24 +1,7 @@
-import React from "react";
-import { Container } from "../../../styledComponents/Containers";
 import styled from "styled-components";
-import {AboutPropsType, StyledSection} from "./About";
-import {SectionTitle} from "../../../components/SectionTitle";
-import {FlexContainer} from "../../../styledComponents/FlexContainer";
+import {StyledSection} from "../about/aboutStyles";
 
-export function Contacts() {
-	return (
-		<StyledContactSection id="contacts" >
-			<Container>
-				<FlexContainer direction={"column"} align={"center"}>
-					<StyledTitle>{"For any questions please mail me:"}</StyledTitle>
-					<StyledContact href={"mailto:hi@pavanmg.in"}>hi@pavanmg.in</StyledContact>
-				</FlexContainer>
-			</Container>
-		</StyledContactSection>
-	);
-}
-
-const StyledContactSection = styled(StyledSection)`
+const ContactSection = styled(StyledSection)`
 	padding-top: 100px;
 	padding-bottom: 150px;
 
@@ -39,7 +22,7 @@ const StyledContactSection = styled(StyledSection)`
 	}
 `
 
-const StyledTitle = styled.h2`
+const ContactTitle = styled.h2`
   color: ${props => props.theme.colors.title};
   font-size: 58px;
   font-weight: 500;
@@ -64,7 +47,7 @@ const StyledTitle = styled.h2`
 	}
 `
 
-const StyledContact = styled.a`
+const Contact = styled.a`
 	background: linear-gradient(90.00deg, rgb(19, 176, 245),rgb(231, 15, 170));
 	-webkit-background-clip:text;
 	-webkit-text-fill-color:transparent;
@@ -96,3 +79,9 @@ const StyledContact = styled.a`
 		font-size: 32px;
 	}
 `
+
+export const S = {
+    ContactSection,
+    ContactTitle,
+    Contact
+}

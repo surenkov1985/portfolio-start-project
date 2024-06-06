@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import {WorkItem, WorkItemPropsType} from "./WorkItem";
 import styled from "styled-components";
 

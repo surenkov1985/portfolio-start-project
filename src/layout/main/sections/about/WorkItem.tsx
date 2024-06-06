@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {Icon} from "./Icon";
-import {FlexContainer} from "../styledComponents/FlexContainer";
+import {Icon} from "../../../../components/Icon";
+import {FlexContainer} from "../../../../styledComponents/FlexContainer";
 
 export type WorkItemPropsType = {
     id: number|string

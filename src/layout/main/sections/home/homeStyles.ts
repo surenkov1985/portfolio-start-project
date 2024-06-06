@@ -1,33 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import { Container } from "../../../styledComponents/Containers";
-import portfolio from "../../../assets/images/portfolio.jpg";
-import { FlexContainer } from "../../../styledComponents/FlexContainer";
-import {AboutPropsType} from "./About";
-import {S} from "../../footer/footerStyles";
+import {FlexContainer} from "../../../../styledComponents/FlexContainer";
 
-export function Home(props:AboutPropsType) {
-	return (
-		<StyledSection id="home" ref={props.refVal}>
-			<Container>
-				<StyledFlexContainer align="center" justify="space-between">
-					<StyledTitle>
-						<span>
-							Hi 👋,
-							<br /> My name is <br /> <S.GradientText>Pavan MG</S.GradientText>
-						</span>
-						<h1>I build things for web</h1>
-					</StyledTitle>
-					<StyledImageContainer>
-						<StyledImage src={portfolio} />
-					</StyledImageContainer>
-				</StyledFlexContainer>
-			</Container>
-		</StyledSection>
-	);
-}
-
-const StyledSection = styled.section`
+const Section = styled.section`
 	padding: 200px 0 100px 0;
 
 	@media (max-width: 1240px) {
@@ -47,7 +21,7 @@ const StyledSection = styled.section`
 	}
 `;
 
-const StyledFlexContainer = styled(FlexContainer)`
+const HomeFlexContainer = styled(FlexContainer)`
 
 	@media (max-width: 576px) {
 		flex-direction: column-reverse;
@@ -56,14 +30,8 @@ const StyledFlexContainer = styled(FlexContainer)`
 	}
 `
 
-const StyledImage = styled.img`
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 50%;
-`;
 
-const StyledImageContainer = styled.div`
+const HomeImage = styled.div`
 	width: 350px;
 	height: 350px;
 	border-radius: 50%;
@@ -71,6 +39,13 @@ const StyledImageContainer = styled.div`
 	position: relative;
 	flex-shrink: 0;
 	margin-right: 10px;
+  
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
 	&::before {
 		content: "";
@@ -106,7 +81,7 @@ const StyledImageContainer = styled.div`
 	}
 `;
 
-const StyledTitle = styled.div`
+const Title = styled.div`
 	& * {
 		font-size: 58px;
 		font-weight: 700;
@@ -137,3 +112,9 @@ const StyledTitle = styled.div`
 	}
 `;
 
+export const St = {
+    Section,
+    HomeFlexContainer,
+    HomeImage,
+    Title
+}

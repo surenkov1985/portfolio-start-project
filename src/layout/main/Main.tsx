@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
 import styled from "styled-components";
-import { About } from "./sections/About";
-import { Contacts } from "./sections/Contacts";
-import { Home } from "./sections/Home";
-import { Projects } from "./sections/Projects";
-import { Stack } from "./sections/Stack";
+import { About } from "./sections/about/About";
+import { Contacts } from "./sections/contacts/Contacts";
+import { Home } from "./sections/home/Home";
+import { Projects } from "./sections/projects/Projects";
+import { Stack } from "./sections/stack/Stack";
 import {useInView} from "react-intersection-observer";
 import {Header} from "../header/Header";
 
@@ -21,7 +21,7 @@ export function Main(props:MainPropsType) {
 	})
 
 	useEffect(()=>{
-		console.log(inView, entry)
+
 			setActive(!inView)
 	}, [inView])
 

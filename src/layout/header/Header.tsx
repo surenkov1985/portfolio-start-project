@@ -1,4 +1,4 @@
-import styled, {css, ThemeContext} from "styled-components";
+import  {ThemeContext} from "styled-components";
 
 import React, {useContext, useEffect, useState} from "react";
 import { Container } from "../../styledComponents/Containers";
@@ -6,7 +6,7 @@ import { Logo } from "../../components/Logo";
 import { Menu } from "./menu/Menu";
 import { routes } from "../../assets/scripts/variables";
 import { Socials } from "../../components/Socials";
-import {ThemeToggler} from "../../components/ThemeToggler";
+import {ThemeToggler} from "./ThemeToggler";
 import {Mobile} from "../mobile/Mobile";
 import {S} from "./HeaderStyles";
 import {HeaderPropsType} from "./HeaderTypes";
@@ -16,7 +16,7 @@ export const  Header:React.FC<HeaderPropsType> = (props:HeaderPropsType) => {
 	const [mobileActive, setMobileActive] = useState(false);
 	const theme = useContext(ThemeContext)
 	useEffect(() => {
-		console.log(mobileActive)
+
 		if (mobileActive) {
 			document.body.classList.add("hidden")
 		} else {

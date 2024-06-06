@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { socialList } from "../assets/scripts/variables";
 import { Link } from "./Link";
+import {S} from "../styledComponents/socialsStyles";
 
 export function Socials(props: SocialsPropsType) {
 
 
 	return (
-		<StyledSocials>
+		<S.Socials>
 			{socialList.map((item) => {
 				return (
 					<Link
@@ -21,7 +22,7 @@ export function Socials(props: SocialsPropsType) {
 					/>
 				);
 			})}
-		</StyledSocials>
+		</S.Socials>
 	);
 }
 
@@ -29,7 +30,7 @@ type SocialsPropsType = {
 	color?: string;
 };
 
-export const StyledSocials = styled.div`
+ const StyledSocials = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 1.25rem;

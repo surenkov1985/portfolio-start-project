@@ -1,9 +1,9 @@
 import React from "react";
-import { Container } from "../../../styledComponents/Containers";
-import {AboutPropsType, StyledSection} from "./About";
-import {SectionTitle} from "../../../components/SectionTitle";
-import {projects} from "../../../assets/scripts/variables";
-import {Cards} from "../../../components/Cards";
+import { Container } from "../../../../styledComponents/Containers";
+import { StyledSection} from "../about/aboutStyles";
+import {SectionTitle} from "../../../../components/SectionTitle";
+import {projects} from "../../../../assets/scripts/variables";
+import {Cards} from "./Cards";
 
 export function Projects() {
 	return (
