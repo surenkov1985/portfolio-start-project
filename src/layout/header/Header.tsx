@@ -34,7 +34,7 @@ export const  Header:React.FC<HeaderPropsType> = (props:HeaderPropsType) => {
 				<Logo iconType="gradient" />
 				<Menu routes={routes} toggleMobile={toggleMobileMenu}/>
 				<Socials color={theme.colors.primary} />
-				<ThemeToggler toggleTheme={props.toggleTheme}/>
+				<ThemeToggler toggleTheme={props.toggleTheme} theme={props.theme}/>
 				<Mobile isActive={mobileActive} closeMobile={toggleMobileMenu}  routes={routes}	/>
 			</Container>
 		</S.StyledHead>

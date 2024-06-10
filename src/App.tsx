@@ -25,8 +25,8 @@ export function App() {
 		<ThemeProvider theme={theme === 'light' ? light : dark}>
 			<Wrapper>
 				<Particle/>
-				<Header toggleTheme={toggleTheme}/>
-				<Main toggleTheme={toggleTheme}/>
+				<Header toggleTheme={toggleTheme} theme={theme}/>
+				<Main toggleTheme={toggleTheme} theme={theme}/>
 				<Footer />
 			</Wrapper>
 			<GlobalStyles />

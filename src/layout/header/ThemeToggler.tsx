@@ -4,15 +4,14 @@ import {FlexContainer} from "../../styledComponents/FlexContainer";
 
 type ThemeTogglerPropsType = {
     toggleTheme?: () => void
+    theme: string
 }
 export function ThemeToggler(props:ThemeTogglerPropsType) {
-    const theme = useContext(ThemeContext);
-    const myTheme = useTheme()
 
     return (
         <FlexContainer align={"center"} style={{marginLeft: "40px"}}>
             <StyledTHemeToggler className="switch">
-                <input type="checkbox"  onChange={props.toggleTheme}/>
+                <input type="checkbox"  onChange={props.toggleTheme} checked={props.theme === 'dark'} />
                     <StyledSlider className="slider round"/>
             </StyledTHemeToggler>
         </FlexContainer>
@@ -30,7 +29,7 @@ const StyledTHemeToggler = styled.label`
     display: none;
     
     &:checked + .slider {
-      background-color: #2196F3;
+      background: linear-gradient(90deg,rgb(19,176,245),rgb(231,15,170));
 
       &::before {
         //background-image: url(/assets/img/icons/check_dark.svg);

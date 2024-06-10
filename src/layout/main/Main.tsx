@@ -10,6 +10,7 @@ import {Header} from "../header/Header";
 
 type MainPropsType = {
 	toggleTheme?: () => void
+	theme:string
 }
 export function Main(props:MainPropsType) {
 	const [active, setActive] = useState(false)
@@ -32,7 +33,7 @@ export function Main(props:MainPropsType) {
 			<Stack />
 			<Projects />
 			<Contacts/>
-			<Header isActive={active} fixed={true} toggleTheme={props.toggleTheme}/>
+			<Header isActive={active} fixed={true} toggleTheme={props.toggleTheme} theme={props.theme}/>
 		</StyledMain>
 	);
 }
