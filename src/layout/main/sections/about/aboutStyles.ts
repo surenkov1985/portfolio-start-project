@@ -5,6 +5,7 @@ export const StyledSection = styled.section`
 	padding-top: 86px;
 	padding-bottom: 86px;
 	overflow: hidden;
+  position: relative;
 
 	@media ${props => props.theme.media.tablet} {
 		padding: 60px 0;

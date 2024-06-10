@@ -6,6 +6,7 @@ import { Main } from "./layout/main/Main";
 import {dark, light} from "./assets/styles/Theme.styled";
 import {GlobalStyles} from "./assets/styles/GlobalStyles";
 import React, {useContext, useEffect, useState} from "react";
+import {Particle} from "./components/particle/Particles";
 
 
 export function App() {
@@ -23,6 +24,7 @@ export function App() {
 	return (
 		<ThemeProvider theme={theme === 'light' ? light : dark}>
 			<Wrapper>
+				<Particle/>
 				<Header toggleTheme={toggleTheme}/>
 				<Main toggleTheme={toggleTheme}/>
 				<Footer />

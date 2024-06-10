@@ -4,6 +4,7 @@ import {HeaderPropsType} from "./HeaderTypes";
 const StyledHead = styled.header<HeaderPropsType>`
 	width: 100%;
 	padding: 40px 0;
+	position: relative;
 	
 	${props => props.fixed && css`
 		width: 100%;

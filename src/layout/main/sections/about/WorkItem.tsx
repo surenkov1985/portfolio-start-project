@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../../components/Icon";
 import {FlexContainer} from "../../../../styledComponents/FlexContainer";
+import { useInView } from "framer-motion";
 
 export type WorkItemPropsType = {
     id: number|string
@@ -13,15 +14,29 @@ export type WorkItemPropsType = {
 }
 
 export function WorkItem(props:WorkItemPropsType) {
+    const ref = useRef(null);
+    const isInView = useInView(ref)
 
         return (
-            <StyledWorkItem align="normal" justify="space-between" direction={"column"} gap={"8px"}>
-                <StyledWorkDesc justify="space-between" >
+            <StyledWorkItem ref={ref} align="normal" justify="space-between" direction={"column"} gap={"8px"}>
+                <StyledWorkDesc
+                    justify="space-between"
+                    style={{
+                    transform: isInView ? "none" : "translateY(20px)",
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
+                }}>
                     <StyledWorkTitle>{props.name}</StyledWorkTitle>
                     <StyledWorkType>{props.type}</StyledWorkType>
 
                 </StyledWorkDesc>
-                <StyledWorkDate justify={"space-between"}>
+                <StyledWorkDate
+                    justify={"space-between"}
+                                style={{
+                                    transform: isInView ? "none" : "translateY(20px)",
+                                    opacity: isInView ? 1 : 0,
+                                    transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) "
+                                }}>
                     <StyledWorkPlace align="center" justify="space-between" wrap={"wrap"}>
                         <span><Icon iconId={"house"} width={"16px"} height={"12px"} viewBox={"viewBox=\"0 0 16 12\""}/>{props.company}</span>
                         {props.place && (<span><Icon iconId={"location"} width={"16px"} height={"12px"} viewBox={"viewBox=\"0 0 16 12\""}/> {props.place}</span>)}

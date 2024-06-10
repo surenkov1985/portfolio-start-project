@@ -4,6 +4,7 @@ import {FlexContainer} from "../../../../styledComponents/FlexContainer";
 export const StyledSection = styled.section`
 	padding-top: 76px;
 	padding-bottom: 116px;
+ position: relative;
 
 	@media screen and (max-width: 991px) {
 		padding-top: 65px;
