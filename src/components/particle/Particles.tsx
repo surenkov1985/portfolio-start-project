@@ -62,7 +62,7 @@ export function Particle() {
                         color: theme.colors.primary,
                         distance: 250,
                         enable: true,
-                        opacity: 0.3,
+                        opacity: 0.2,
                         width: 1,
                     },
                     move: {

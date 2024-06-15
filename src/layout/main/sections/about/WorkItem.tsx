@@ -38,11 +38,11 @@ export function WorkItem(props:WorkItemPropsType) {
                                     transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) "
                                 }}>
                     <StyledWorkPlace align="center" justify="space-between" wrap={"wrap"}>
-                        <span><Icon iconId={"house"} width={"16px"} height={"12px"} viewBox={"viewBox=\"0 0 16 12\""}/>{props.company}</span>
-                        {props.place && (<span><Icon iconId={"location"} width={"16px"} height={"12px"} viewBox={"viewBox=\"0 0 16 12\""}/> {props.place}</span>)}
+                        <span><Icon iconId={"house"} width={"16"} height={"12"} viewBox={"0 0 16 12"}/>{props.company}</span>
+                        {props.place && (<span><Icon iconId={"location"} width={"16"} height={"12"} viewBox={"0 0 16 12"}/> {props.place}</span>)}
                     </StyledWorkPlace>
                     <StyledWorkText align="center" justify="space-between">
-                        <span><Icon iconId={"calendar"} width={"16px"} height={"12px"} viewBox={"viewBox=\"0 0 16 12\""}/> {props.dates}</span>
+                        <span><Icon iconId={"calendar"} width={"16"} height={"12"} viewBox={"0 0 16 12"}/> {props.dates}</span>
                     </StyledWorkText>
                 </StyledWorkDate>
             </StyledWorkItem>

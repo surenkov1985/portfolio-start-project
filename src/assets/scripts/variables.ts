@@ -223,7 +223,8 @@ export const stackList = [
 		name: "Greensock",
 		width: "120",
 		height: "120",
-		viewBox: "0 0 120 120"
+		viewBox: "0 0 120 120",
+		color: "#000"
 	},
 	{
 		iconId: "vsc",
@@ -237,7 +238,8 @@ export const stackList = [
 		name: "Github",
 		width: "88",
 		height: "88",
-		viewBox: "0 0 88 88"
+		viewBox: "0 0 88 88",
+		color: "#000"
 	},
 
 ]

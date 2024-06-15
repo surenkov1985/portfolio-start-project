@@ -47,7 +47,7 @@ const HomeImage = styled.div`
       border-radius: 50%;
     }
 
-	&::before {
+	&::after {
 		content: "";
 		display: block;
 		position: absolute;

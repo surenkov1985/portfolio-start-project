@@ -41,5 +41,5 @@ const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	background: ${props=> props.theme.colors.bg};
-	transition: background 1s;
+	transition: all 1s;
 `;
